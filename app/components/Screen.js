@@ -1,5 +1,5 @@
 import React from "react";
-import { ImagePropTypes, SafeAreaView, StyleSheet, View } from "react-native";
+import { SafeAreaView, StyleSheet, View } from "react-native";
 import Constants from "expo-constants";
 
 const Screen = ({ children, style }) => {
