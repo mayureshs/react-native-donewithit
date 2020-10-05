@@ -1,21 +1,45 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React, { useState } from "react";
+import { StyleSheet, TextInput, View, Text } from "react-native";
+import { MaterialCommunityIcons } from "@expo/vector-icons";
+
+import AppText from "./app/components/AppText";
+import ViewImageScreen from "./app/screens/ViewImageScreen";
+import WelcomeScreen from "./app/screens/WelcomeScreen";
+import ListDetailsScreen from "./app/screens/ListDetailsScreen";
+import MessagesScreen from "./app/screens/MessagesScreen";
+
+import AppButton from "./app/components/AppButton";
+import Card from "./app/components/Card";
+import Screen from "./app/components/Screen";
+import Icon from "./app/components/Icon";
+import ListItem from "./app/components/ListItem";
+import AccountScreen from "./app/screens/AccountScreen";
+import ListingScreen from "./app/screens/ListingScreen";
+import AppTextInput from "./app/components/AppTextInput";
+import colors from "./app/config/colors";
+import AppPicker from "./app/components/AppPicker";
+import LoginScreen from "./app/screens/LoginScreen";
 
 export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+  return <LoginScreen />;
 }
 
 const styles = StyleSheet.create({
+  box: {
+    backgroundColor: "dodgerblue",
+    flexDirection: "row",
+    justifyContent: "center",
+    width: 100,
+    height: 100,
+  },
+  card: {
+    backgroundColor: "#f8f4f4",
+    padding: 20,
+    paddingTop: 100,
+  },
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    alignItems: "center",
+    justifyContent: "center",
   },
 });
