@@ -10,16 +10,16 @@ import {
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 
 import AppText from "./AppText";
-import Screen from "./Screen";
+import AppScreen from "./AppScreen";
 import defaultStyles from "../config/styles";
-import PickerItem from "./PickerItem";
+import AppPickerItem from "./AppPickerItem";
 
 function AppPicker({
   icon,
   items,
   numberOfColumns = 1,
   onSelectItem,
-  PickerItemComponent = PickerItem,
+  PickerItemComponent = AppPickerItem,
   placeholder,
   selectedItem,
   width = "100%",
@@ -52,7 +52,7 @@ function AppPicker({
         </View>
       </TouchableWithoutFeedback>
       <Modal visible={modalVisible} animationType="slide">
-        <Screen>
+        <AppScreen>
           <Button title="Close" onPress={() => setModalVisible(false)} />
           <FlatList
             data={items}
@@ -69,7 +69,7 @@ function AppPicker({
               />
             )}
           />
-        </Screen>
+        </AppScreen>
       </Modal>
     </>
   );

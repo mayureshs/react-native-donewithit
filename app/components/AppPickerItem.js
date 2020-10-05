@@ -2,7 +2,7 @@ import React from "react";
 import { StyleSheet, TouchableOpacity, Text } from "react-native";
 import AppText from "./AppText";
 
-const PickerItem = ({ item, onPress }) => {
+const AppPickerItem = ({ item, onPress }) => {
   return (
     <TouchableOpacity onPress={onPress}>
       <AppText style={styles.text}>{item.label}</AppText>
@@ -16,4 +16,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default PickerItem;
+export default AppPickerItem;

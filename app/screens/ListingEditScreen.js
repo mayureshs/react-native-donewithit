@@ -8,8 +8,8 @@ import {
   AppFormPicker as FormPicker,
   AppSubmitButton as SubmitButton,
 } from "../components/forms";
-import Screen from "../components/Screen";
-import CategoryPickerItem from "../components/CategoryPickerItem";
+import AppScreen from "../components/AppScreen";
+import AppCategoryPickerItem from "../components/AppCategoryPickerItem";
 
 const validationSchema = Yup.object().shape({
   title: Yup.string().required().min(1).label("Title"),
@@ -26,7 +26,7 @@ const categories = [
 
 const ListingEditScreen = () => {
   return (
-    <Screen style={styles.container}>
+    <AppScreen style={styles.container}>
       <Form
         initialValues={{
           title: "",
@@ -49,7 +49,7 @@ const ListingEditScreen = () => {
           items={categories}
           name="category"
           numberOfColumns={3}
-          PickerItemComponent={CategoryPickerItem}
+          PickerItemComponent={AppCategoryPickerItem}
           placeholder="Category"
           width={200}
         />
@@ -62,7 +62,7 @@ const ListingEditScreen = () => {
         />
         <SubmitButton title="Post" />
       </Form>
-    </Screen>
+    </AppScreen>
   );
 };
 const styles = StyleSheet.create({

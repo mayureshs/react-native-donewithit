@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import { FlatList, StyleSheet, View } from "react-native";
+import { FlatList, StyleSheet } from "react-native";
 
-import ListItem from "../components/ListItem";
-import ListItemDeleteAction from "../components/ListItemDeleteAction";
-import ListItemSeperator from "../components/ListItemSeperator";
-import Screen from "../components/Screen";
+import ListItem from "../components/lists/ListItem";
+import ListItemDeleteAction from "../components/lists/ListItemDeleteAction";
+import ListItemSeperator from "../components/lists/ListItemSeperator";
+import AppScreen from "../components/AppScreen";
 
 const initalMessages = [
   {
@@ -32,7 +32,7 @@ const MessagesScreen = () => {
   };
 
   return (
-    <Screen>
+    <AppScreen>
       <FlatList
         data={messages}
         keyExtractor={(message) => message.id.toString()}
@@ -60,7 +60,7 @@ const MessagesScreen = () => {
           ])
         }
       />
-    </Screen>
+    </AppScreen>
   );
 };
 
