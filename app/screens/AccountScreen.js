@@ -6,6 +6,7 @@ import AppScreen from "../components/AppScreen";
 import colors from "../config/colors";
 import AppIcon from "../components/AppIcon";
 import ListItemSeperator from "../components/lists/ListItemSeperator";
+import routes from "../navigation/routes";
 
 const menuItems = [
   {
@@ -15,10 +16,11 @@ const menuItems = [
   {
     title: "My Messages",
     icon: { name: "email", backgroundColor: colors.secondary },
+    targetScreen: routes.MESSAGES,
   },
 ];
 
-const AccountScreen = () => {
+const AccountScreen = ({ navigation }) => {
   return (
     <AppScreen style={styles.screen}>
       <View style={styles.container}>
@@ -26,7 +28,7 @@ const AccountScreen = () => {
           title="Mayuresh Sawardekar"
           subTitle="mayuresh@gmail.com"
           image={require("../assets/mosh.jpg")}
-        ></ListItem>
+        />
       </View>
       <View>
         <FlatList
@@ -42,6 +44,7 @@ const AccountScreen = () => {
                   backgroundColor={item.icon.backgroundColor}
                 />
               }
+              onPress={() => navigation.navigate(item.targetScreen)}
             />
           )}
         />
